@@ -16,15 +16,15 @@ flappybird1:
   env_id: FlappyBird-v0
   replay_memory_size: 100000
   mini_batch_size: 32
-  epsilon_init: 1
-  epsilon_decay: 0.99_99_5
-  epsilon_min: 0.05
-  network_sync_rate: 10
-  learning_rate_a: 0.0001
+  epsilon_init: 0.1              # OPTIMIZED: Start with less random exploration
+  epsilon_decay: 0.9995          # OPTIMIZED: Faster decay for quicker learning
+  epsilon_min: 0.01              # OPTIMIZED: Lower minimum for better exploitation
+  network_sync_rate: 100         # OPTIMIZED: More stable (was 10, too frequent)
+  learning_rate_a: 0.0005        # OPTIMIZED: Faster learning (was 0.0001)
   discount_factor_g: 0.99
   stop_on_reward: 100000
   fc1_nodes: 512
   env_make_params:
-    use_lidar: False
+    use_lidar: True              # ASSIGNMENT: Using LIDAR sensors for 25 points
   enable_double_dqn: True
   enable_dueling_dqn: True

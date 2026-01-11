@@ -152,12 +152,6 @@ class Agent():
                 # Execute action. Truncated and info is not used.
                 new_state,reward,terminated,truncated,info = env.step(action.item())
 
-                # REWARD SHAPING: Encourage survival and penalize death
-                if not terminated:
-                    reward = reward + 0.01  # Bonus for survival
-                else:
-                    reward = reward - 5    # Penalty for death (added to original reward)
-
                 # Accumulate rewards
                 episode_reward += reward
 

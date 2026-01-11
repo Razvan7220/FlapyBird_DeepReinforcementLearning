@@ -10,7 +10,10 @@
             "request": "launch",
             "program": "agent.py",
             "console": "integratedTerminal",
-            "args": ["cartpole1", "--train"]
+            "args": [
+                "cartpole1",
+                "--train"
+            ]
         },
         {
             "name": "Train flappybird1",
@@ -18,7 +21,10 @@
             "request": "launch",
             "program": "agent.py",
             "console": "integratedTerminal",
-            "args": ["flappybird1", "--train"]
+            "args": [
+                "flappybird1",
+                "--train"
+            ]
         }
     ]
 }
