@@ -1,0 +1,7 @@
+gymnasium
+flappy-bird-gymnasium
+torch
+torchvision
+numpy
+opencv-python
+matplotlib
